@@ -1,0 +1,21 @@
+* {
+	padding: 0 ;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+img {
+ width: 50%; 
+ height: 50%; 
+ object-fit: contain
+}
+.responsive_img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Prevent the image from stretching. So it crops the image to prevent from awkward stretching */
+}
