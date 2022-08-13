@@ -19,25 +19,28 @@
 </head>
 <body>
 	<div>
-		<h4>Galeria</h4>
-	</div>
+		<h4>Galeria
+  <h5>    <?= htmlspecialchars($totalImagenes, ENT_QUOTES, 'UTF-8'); ?> </h5>
+</h4>
+    </div>
+
 
 
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
-    
-<?php
+    <?php
 
 $num = 0;
  
 foreach ($imagenesActividad as $imagen):  ?>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?= $num; ?>" class="active" aria-current="true" aria-label="Slide <?= $num; ?>"></button> <?php $num ++; ?>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?= $num; ?>" class="active" aria-current="true" aria-label="Slide <?= $num; ?>"></button> <?php $num ++ ; ?>
     
 <?php endforeach; ?>
-</div>
+
+
+  </div>
   <div class="carousel-inner">
-  	
-<?php
+    <?php
 foreach ($imagenesActividad as $imagen):  ?>
   
     <div class="carousel-item active">
@@ -45,20 +48,21 @@ foreach ($imagenesActividad as $imagen):  ?>
     </div>
     
 <?php endforeach; ?>
-
-    </div>
   </div>
+  
+
+
+
+
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previa</span>
+    <span class="visually-hidden">Previous</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Siguiente</span>
+    <span class="visually-hidden">Next</span>
   </button>
 </div>
 
 </body>
 </html>
-
-
