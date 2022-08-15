@@ -45,6 +45,7 @@ foreach ($imagenesActividad as $imagen):  ?>
   
     <div class="carousel-item active">
       <img src="<?= htmlspecialchars($imagen['archivo'], ENT_QUOTES, 'UTF-8'); ?>" class="d-block w-100" alt="...">
+      <img src="IMG-20220801-WA0033.jpg" alt="...">
     </div>
     
 <?php endforeach; ?>
@@ -52,7 +53,7 @@ foreach ($imagenesActividad as $imagen):  ?>
   
 
 
-
+<div>
 
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -63,6 +64,6 @@ foreach ($imagenesActividad as $imagen):  ?>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
+</div>
 </body>
 </html>
