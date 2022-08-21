@@ -1,45 +1,14 @@
 <?php
 include __DIR__ . '/../include/conect.php';
 include __DIR__ . '/../include/funciones.php';
-include_once('fpdf.php');
-
-Image('/../imagenes/IMG-20220801-WA0074.jpg',10,-1,70);
-    $this->SetFont('Arial','B',13);
-    // Move to the right
-    $this->Cell(80);
-    // Title
-    $this->Cell(80,10,'Employee List',1,0,'C');
-    // Line break
-    $this->Ln(20);
+//include_once('fpdf.php');
 
 
-// Page footer
-function Footer()
-{
-    // Position at 1.5 cm from bottom
-    $this->SetY(-15);
-    // Arial italic 8
-    $this->SetFont('Arial','I',8);
-    // Page number
-    $this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
-}
+require('fpdf.php');
 
-
-
-
-$pdf = new PDF();
-//header
+$pdf = new FPDF();
 $pdf->AddPage();
-//foter page
-$pdf->AliasNbPages();
-$pdf->SetFont('Arial','B',12);
-foreach($header as $heading) {
-$pdf->Cell(40,12,$display_heading[$heading['Field']],1);
-}
-foreach($result as $row) {
-$pdf->Ln();
-foreach($row as $column)
-$pdf->Cell(40,12,$column,1);
-}
+$pdf->SetFont('Arial','B',16);
+$pdf->Cell(40,10,'¡Hola, Mundo!');
 $pdf->Output();
 ?>

@@ -5,13 +5,13 @@ include __DIR__ . '/../include/funciones.php';
 
 
 
-$sql='call fotosActividad(133);';
+$sql='call fotosActividad(152);';
 
 $imagenesActividad = $pdo->query($sql);
 $totalImagenes = $imagenesActividad->rowCount();
 
 
 
-		include  __DIR__ . '/../templates/verImagenes4.html.php';
+		include  __DIR__ . '/../templates/verImagenes.html.php';
 
 
