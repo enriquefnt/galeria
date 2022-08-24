@@ -78,7 +78,7 @@ function PrintChapter($num,$title,$file)
 }
 }
 
-
+///////////////*////////////////////////*////////////////////
 
 
 function query($pdo, $sql, $parameters = []) {
