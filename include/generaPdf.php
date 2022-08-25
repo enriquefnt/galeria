@@ -5,7 +5,7 @@ require('fpdf.php');
 
 include __DIR__ . '/../include/conect.php';
 include __DIR__ . '/../include/funciones.php';
-
+include __DIR__ . '/../include/clases.php';
 
 
 //$query = $pdo->prepare('call `saltaped_actividades-promo`.paraInfPdf('.$_GET['id'].');');

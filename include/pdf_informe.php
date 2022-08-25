@@ -4,7 +4,7 @@ require('fpdf.php');
 
 include __DIR__ . '/../include/conect.php';
 include __DIR__ . '/../include/funciones.php';
-
+include __DIR__ . '/../include/clases.php';
 
 
 $pdf=new PDF();
