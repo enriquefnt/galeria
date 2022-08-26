@@ -12,18 +12,18 @@ function Header()
 	global $title;
 
 	//Arial bold 15
-	$this->SetFont('Arial','BI',25);
+	$this->SetFont('Arial','B',18);
 	//Calculate width of title and position
 	$w=$this->GetStringWidth($title)+6;
 	$this->SetX((210-$w)/2);
 	//Colors of frame, background and text
-	$this->SetDrawColor(0,80,180);
-	$this->SetFillColor(230,230,50);
-	$this->SetTextColor(220,50,50);
+	$this->SetDrawColor(0,50,70);
+	$this->SetFillColor(230,230,230);
+	$this->SetTextColor(0,50,50);
 	//Thickness of frame (1 mm)
 	$this->SetLineWidth(1);
 	//Title
-	$this->Cell($w,9,$title,1,1,'C',1);
+	$this->Cell($w,10,$title,1,1,'C',1);
 	//Line break
 	$this->Ln(10);
 }
@@ -37,7 +37,8 @@ function Footer()
 	//Text color in gray
 	$this->SetTextColor(128);
 	//Page number
-	$this->Cell(0,10,utf8_decode('Página ').$this->PageNo(),0,0,'C');
+	//$this->Cell(0,10,utf8_decode('Página ').$this->PageNo(),0,0,'C');
+     $this->Cell(0,10,utf8_decode('SNyAS'),0,0,1,'C');
 }
 
 function ChapterTitle($num,$label)
