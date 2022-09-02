@@ -8,11 +8,11 @@ include __DIR__ . '/../include/conect.php';
 include __DIR__ . '/../include/funciones.php';
 include __DIR__ . '/../include/clases.php';
 
-$query = $pdo->prepare('call `saltaped_actividades-promo`.paraInfPdf(152);');
+$query = $pdo->prepare('call `saltaped_actividades-promo`.paraInfPdf(133);');
     	$query->execute();
     	$actiPdf = $query->fetch();	
 
-$sql='call fotosActividad(152);';
+$sql='call fotosActividad(133);';
 $imagenesActividad = $pdo_ub->query($sql);
 //$totalImagenes = $imagenesActividad->rowCount();
 
