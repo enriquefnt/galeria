@@ -13,8 +13,8 @@ $query = $pdo->prepare('call `saltaped_actividades-promo`.paraInfPdf(152);');
     	$actiPdf = $query->fetch();	
 
 $sql='call fotosActividad(152);';
-$imagenesActividad = $pdo_ub->query($sql);
-//$totalImagenes = $imagenesActividad->rowCount();
+		$imagenesActividad = $pdo_ub->query($sql);
+
 
 $title= utf8_decode('Informe de actividad de Promoción');
 $texto= utf8_decode($actiPdf['descri']);
