@@ -1,8 +1,8 @@
 <?php
 
 include __DIR__ . '/../include/conect.php';
-
-$pdo->query("DROP TABLE IF EXISTS temp1; CREATE  TABLE temp1 select distinct(aop) ,areaoperativa, count(concat(year(inicio),'-', month(inicio))) as n_actividades ,date_format(inicio, '%Y_%m_%M') AS mes_año from act_actividad inner join act_aop on aop=idaop group by mes_año,aop, areaoperativa  ;");
+setlocale(LC_ALL,"es_ES");
+$pdo->query("DROP TABLE IF EXISTS temp1; SET lc_time_names = 'es_ES';CREATE  TABLE temp1 select distinct(aop) ,areaoperativa, count(concat(year(inicio),'-', month(inicio))) as n_actividades ,date_format(inicio, '%Y_%m_%M') AS mes_año from act_actividad inner join act_aop on aop=idaop group by mes_año,aop, areaoperativa  ;");
 
 
 $sql="SELECT areaoperativa,mes_año,n_actividades from temp1" ;
@@ -21,7 +21,12 @@ foreach ($resultObject as $row) {
 sort($columns);
 $defaults = array_fill_keys($columns, ' ');
 array_unshift($columns, 'Area Operativa');
-
+echo "<style>
+      table, th, td {
+        border: 1px solid blue;
+        border-collapse: collapse;
+      }
+</style>";
 echo "<table>\n";
     printf(
         "<tr><th>%s</th></tr>\n",
@@ -35,6 +40,3 @@ echo "<table>\n";
         );
     }
 echo "</table>";
-print_r($defaults);
-print_r($grouped);
-print_r($columns);
