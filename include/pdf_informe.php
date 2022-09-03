@@ -8,13 +8,19 @@ include __DIR__ . '/../include/conect.php';
 include __DIR__ . '/../include/funciones.php';
 include __DIR__ . '/../include/clases.php';
 
-$query = $pdo->prepare('call `saltaped_actividades-promo`.paraInfPdf(152);');
+$query = $pdo->prepare('call `saltaped_actividades-promo`.paraInfPdf(133);');
     	$query->execute();
     	$actiPdf = $query->fetch();	
 
+<<<<<<< HEAD
 $sql='call fotosActividad(152);';
 		$imagenesActividad = $pdo_ub->query($sql);
 
+=======
+$sql='call fotosActividad(133);';
+$imagenesActividad = $pdo_ub->query($sql);
+//$totalImagenes = $imagenesActividad->rowCount();
+>>>>>>> 9141f8c00d26cfd0603cc49da0e4796f214015ae
 
 $title= utf8_decode('Informe de actividad de Promoción');
 $texto= utf8_decode($actiPdf['descri']);
