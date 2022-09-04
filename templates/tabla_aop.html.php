@@ -18,7 +18,7 @@ foreach ($resultObject as $row) {
     $columns[$row['mes_año']] = $row['mes_año'];
 }
 
-sort($columns);
+//sort($columns);
 $defaults = array_fill_keys($columns, ' ');
 array_unshift($columns, 'Area Operativa');
 echo "<style>
